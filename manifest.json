@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "content_scripts": [{
+    "js": ["contentscript.js"],
+    "matches": ["https://simca.unicauca.edu.co/simca/principal.xhtml"]
+  }],
+
+  "name": "Subir notas a SIMCA",
+  "description": "Ejecuta un script que permite facilmente subir notas a SIMCA",
+  "version": "1.0",
+
+  "icons": {
+    "48": "logosimca.png"
+  },
+
+  "permissions": ["tabs", "<all_urls>", "activeTab", "declarativeContent", "storage"]
+  ,
+  "web_accessible_resources": [
+    "scriptSIMCA.js"
+  ]
+  ,
+
+  "browser_action": {
+    "default_icon": "logosimca.png",
+    "default_popup": "popup.html"
+  }
+}
